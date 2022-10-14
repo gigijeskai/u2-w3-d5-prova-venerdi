@@ -22,11 +22,15 @@ async function mostraLibri() {
   //^ciclo che mi restituisce l'indice e crea le card
 }
 
-async function cercaLibro() {
-  let httpLibri = await fetch("https://striveschool-api.herokuapp.com/books");
-  let tuttiLibri = await httpLibri.json();
-  console.log(tuttiLibri);
-}
+// async function cercaLibro(ricerca) {
+//   let httpLibri = await fetch("https://striveschool-api.herokuapp.com/books");
+//   let tuttiLibri = await httpLibri.json();
+
+//   let libri = tuttiLibri.filter((libro) => {
+//     return libro.title.toLowerCase().includes(ricerca.toLowerCase());
+//   });
+//   console.log(libri);
+// }
 
 window.onload = () => {
   mostraLibri();
