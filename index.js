@@ -7,7 +7,7 @@ async function mostraLibri() {
   let container = document.querySelector(".row");
   for (let i = 0; i < tuttiLibri.length; i++) {
     let libro = tuttiLibri[i];
-    container.innerHTML += `<div class="col col-lg-3 col-md-4 mb-5 align-self-stretch "> <div class="card ">
+    container.innerHTML += `<div class="col col-lg-3 col-md-3 col-sm-2 mb-5 align-self-stretch text-center "> <div class="card card h-100">
     <img src=${libro.img} class="card-img-top " alt=${libro.title}>
     <div class="card-body ">
   <h5 class="card-title">${libro.title}</h5>
