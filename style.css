@@ -1,10 +1,17 @@
 :root {
     --primary: rgb(183, 0, 255);
 }
-.bg-primary {
+.bg-primary{
     
     background-color: var(--primary)!important
 }
+
+.btn-primary {
+   
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    
+  }
 
 card img {
             width: 100%;

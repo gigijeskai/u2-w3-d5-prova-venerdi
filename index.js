@@ -2,11 +2,11 @@ async function mostraLibri() {
   let httpLibri = await fetch("https://striveschool-api.herokuapp.com/books");
 
   let tuttiLibri = await httpLibri.json();
-
+  let container = document.querySelector(".row");
+  container.innerHTML = "";
   for (let i = 0; i < tuttiLibri.length; i++) {
     let libro = tuttiLibri[i];
-    document.querySelector(".container").innerHTML += "";
-    let container = document.querySelector(".row");
+
     container.innerHTML += `<div class="col col-lg-3 col-md-4 col-sm-6 mb-5 align-self-stretch text-center "> <div class="card card h-100">
     <img src=${libro.img} class="card-img-top " alt=${libro.title}>
     <div class="card-body ">
@@ -20,6 +20,11 @@ async function mostraLibri() {
 }
 
 window.onload = () => {
+  document.querySelector(".row").innerHTML = `
+<button class="btn btn-primary mb-5" type="button" disabled>
+  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+  Loading...
+</button>`;
   mostraLibri();
 };
 
